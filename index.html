@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Assets/style.css">
+    
+</head>
+</head>
+<header>
+
+<p id="headerText">Weather Dashboard</p>
+</header>
+<section id="contentMain">
+    <!--BELOW IS LEFT SIDE OF SCREEN CONTAINING SEARCHBOX FOR CITYS AND PRESET CITY TILES-->
+    <div id="citySearchContainer">
+        <p id="searchbarText">Search for a city</p>
+        <div id="citySearchBoxContainer">
+            <button id="searchBtn">Search</button>
+            <input id="citySearchInputBox" type="text" placeholder="Type city name to search here" >
+    </div>
+        <div class="presetCitys">
+
+  
+        <div id="presetCitys">
+            <p id="presetBtn" class="city">Chicago, IL</p>
+        </div>
+        <div id="presetCitys">
+            <p id="newYorkBtn" class="city">NewYork, NY</p>
+        </div>
+        <div id="presetCitys">
+            <p id="orlandoBtn" class="city">Orlando, FL</p>
+        </div>
+        <div id="presetCitys">
+            <p id="sanFranBtn" class="city">San Francisco, CA</p>
+        </div>
+        <div id="presetCitys">
+            <p id="seattleBtn" class="city">Seattle, WA</p>
+        </div>
+        <div id="presetCitys">
+            <p id="denverBtn" class="city">Denver, CO</p>
+        </div>
+        <div id="presetCitys">
+            <p id="atlantaBtn" class="city">Atlanta, GA</p>
+        </div>
+        <div id="presetCitys">
+            <p id="stGeorgeBtn" class="city">St.George, UT</p>
+        </div>
+    </div>
+    </div>
+    <!--ABOVE IS LEFT SIDE OF SCREEN CONTAINING SEARCHBOX FOR CITYS AND PRESET CITY TILES-->
+
+
+    <!--BELOW IS RIGHT SIDE OF SCREEN CONTAINING CURRENT WEATHER DATA AND 5DAY FORCAST-->
+    <div id="mainInfoContainer">
+        <!--BELOW IS TOP RIGHT SIDE OF SCREEN HOLDING CURRENT CITY'S INFO-->
+        <div id="currentForcastContainer">
+                <div class="currentChosenLocationInfoContainer">
+                 <p id="currentChosenLocation"></p>   
+                </div>
+                <div class="currentChosenLocationInfoContainer">
+                    <p id="currentChosenLocationTemp"></p>
+                </div>
+                <div class="currentChosenLocationInfoContainer">
+                    <p id="currentChosenLocationWind"></p>
+                </div>
+                <div class="currentChosenLocationInfoContainer">
+                    <p id="currentChosenLocationHumidity"></p>
+                </div>
+                <div class="currentChosenLocationInfoContainer">
+                    <p id="currentChosenLocationUVindex"></p>
+                </div>
+        </div>
+        <!--ABOVE IS TOP RIGHT SIDE OF SCREEN HOLDING CURRENT CITY'S INFO-->
+        <!--BELOW HOLDS 5DAY FORCAST CONTAINERS AND CONTAINER INFO-->
+        <div id="fiveDayForcastContainer">
+            <div class="fivedayForcastCards">
+                <p id="fiveDayForcastText">Tomorrow's Forcast</p>
+                <p class="fivedayForcastCardInfo" id="dayOneTemp"></p>
+                <p class="fivedayForcastCardInfo" id="dayOneWind"></p>
+                <p class="fivedayForcastCardInfo" id="dayOneHumidity"></p>
+                <p class="fivedayForcastCardInfo" id="dayOneUVI"></p>
+            </div>
+            <div class="fivedayForcastCards">
+                <p id="fiveDayForcastText">Two Days From Now</p>
+                <p class="fivedayForcastCardInfo" id="dayTwoTemp"></p>
+                <p class="fivedayForcastCardInfo" id="dayTwoWind"></p>
+                <p class="fivedayForcastCardInfo" id="dayTwoHumidity"></p>
+                <p class="fivedayForcastCardInfo" id="dayTwoUVI"></p>
+            </div>
+            <div class="fivedayForcastCards">
+                <p id="fiveDayForcastText">Three Days From Now</p>
+                <p class="fivedayForcastCardInfo" id="dayThreeTemp"></p>
+                <p class="fivedayForcastCardInfo" id="dayThreeWind"></p>
+                <p class="fivedayForcastCardInfo" id="dayThreeHumidity"></p>
+                <p class="fivedayForcastCardInfo" id="dayThreeUVI"></p>
+            </div>
+            <div class="fivedayForcastCards">
+                <p id="fiveDayForcastText">Four Days From Now</p>
+                <p class="fivedayForcastCardInfo" id="dayFourTemp"></p>
+                <p class="fivedayForcastCardInfo" id="dayFourWind"></p>
+                <p class="fivedayForcastCardInfo" id="dayFourHumidity"></p>
+                <p class="fivedayForcastCardInfo" id="dayFourUVI"></p>
+            </div>
+            <div class="fivedayForcastCards">
+                <p id="fiveDayForcastText">Five Days From Now</p>
+                <p class="fivedayForcastCardInfo" id="dayFiveTemp"></p>
+                <p class="fivedayForcastCardInfo" id="dayFiveWind"></p>
+                <p class="fivedayForcastCardInfo" id="dayFiveHumidity"></p>
+                <p class="fivedayForcastCardInfo" id="dayFiveUVI"></p>
+            </div>
+        </div>
+        <!--ABOVE HOLDS 5DAY FORCAST CONTAINERS AND CONTAINER INFO-->
+    </div>
+    <!--ABOVE IS RIGHT SIDE OF SCREEN CONTAINING CURRENT WEATHER DATA AND 5DAY FORCAST-->
+
+
+
+
+    <!--BELOW IS THE SCRIPT FOR DAY.JS GIVEN DURING STARTUP-->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+    integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+    crossorigin="anonymous"
+  ></script>
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/utc.min.js" 
+    integrity="sha512-m00bfmYnAl3plEBlQfeQUhw/U2uvmw29V2+jxSWpAjankMWS+zAsjezbKWDEJNXqWq9o9qQZSOiA2RKDpa4D5w==" 
+    crossorigin="anonymous"
+  ></script>
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/timezone.min.js" 
+    integrity="sha512-pslqxxHAYPCxaSeFSmXXxDkLejD5dbFVC66aiVq0z4v7VTJBU+wqcG1OpNh4p3MjS2D6NCwz/H2QmSc7dXxryg==" 
+    crossorigin="anonymous"
+  ></script>
+  <!-- ABOVE IS SCRIPT FOR DAY.JS GIVE DURING STARTUP-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./Assets/script.js"></script>
+
+</section>
+
+</html>

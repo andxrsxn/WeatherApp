@@ -1,0 +1,235 @@
+/*BELOW IS THE MYERS RESET I GOT FROM HIS PAGE*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+    /* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*ABOVE IS THE MYERS RESET I GOT FROM HIS PAGE*/
+
+
+/*BELOW IS THE CSS FOR THE HEADER AND HEADER TEXT*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    background-color: blue;
+}
+
+    #headerText {
+        color: beige;
+        font-size: xx-large;
+        font-family: monospace;
+        font-weight: bolder;
+    }
+    /*below sets the image to now allow it to overflow and go outside of parent*/
+    #headerImage {
+        max-width: 100%;
+        max-height:100%;
+    }
+/*ABOVE IS THE CSS FOR THE HEADER AND HEADER TEXT*/
+
+/*BELOW IS THE SEPERATION AND MAKING OF MAIN BODY BELOW HEADER*/
+#contentMain {
+    display: flex;
+    flex-direction: row;
+
+}
+
+    #citySearchContainer{
+        height: 100vh;
+        width: 25vw;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(233, 233, 233);
+
+    }
+
+    #mainInfoContainer{
+        flex-grow: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(233, 233, 233);
+    }
+/*ABOVE IS THE SEPERATION AND MAKING OF MAIN BODY BELOW HEADER*/
+
+/*BELOW IS THE MAKING OF SEARCH BAR AND SET CITYS*/
+#citySearchBoxContainer{
+    display: flex;
+    align-items: center;
+    margin:25px;
+    border-radius: 5px;;
+    height: 4vh;
+    max-width: 80%;
+    background-color: white;
+}
+#citySearchInputBox{
+    z-index: 1;
+    height:80%;
+    max-height: 100%;
+    width:100%;
+    max-width: 100%;
+    background-color: white
+}
+#searchbarText {
+    margin:25px;
+    color: beige;
+}
+
+#presetCitys {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 5px;;
+    height: 7vh;
+    max-width: 80%;
+    background-color: grey;
+}
+/*ABOVE IS THE MAKING OF SEARCH BAR AND SET CITYS*/
+
+/*BELOW IS SEPERATING OUT 5DAY FORCAST AND CURRENT WEATHER*/
+#currentForcastContainer {
+    height: 50%;
+    max-height: 60%;
+    max-width: 90%;
+    margin-left: 48px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.currentChosenLocationInfoContainer{
+    background-color: aliceblue;
+    height:17%;
+    max-height: 20%;
+    max-width: 100%;
+
+}
+
+#currentChosenLocation {
+font-size: xx-large;
+font-weight: bold;
+font-family: monospace;
+color: black;
+}
+#currentChosenLocationTemp {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: monospace;
+    color: black;
+    }
+    #currentChosenLocationWind {
+        font-size: xx-large;
+        font-weight: bold;
+        font-family: monospace;
+        color: black;
+        }
+        #currentChosenLocationHumidity {
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: monospace;
+            color: black;
+            }
+            #currentChosenLocationUVindex {
+                font-size: xx-large;
+                font-weight: bold;
+                font-family: monospace;
+                color: black;
+                }
+/*ABOVE IS SEPERATING OUT 5DAY FORCAST AND CURRENT WEATHER*/
+
+/*BELOW SEPERATES THE DIFFERENT INFO BOXES FOR CURRENT WEATHER*/
+/*ABOVESEPERATES THE DIFFERENT INFO BOXES FOR CURRENT WEATHER*/
+
+/*BELOW SEPERATES EACH DAY FOR 5DAY FORCAST*/
+#fiveDayForcastContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 40%;
+    background-color: rgb(233, 233, 233);
+}
+    .fivedayForcastCards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 50%;
+        background-color: blue;
+        width: 17%;
+        border-radius: 25px;
+    }
+
+    #fiveDayForcastText{
+        color: beige;
+        font-size:x-large;
+        font-family: monospace;
+        font-weight: bolder;
+
+    }
+        .fivedayForcastCardInfo {
+            height:15%;
+            width: 100%;
+            background-color: white;
+            font-size: large;
+
+
+        }
+/*ABOVE SEPERATES EACH DAY FOR 5DAY FORCAST*/
+
+#searchBtn {
+    height:100%;
+    max-height:100%;
+    width:20%;
+    max-width:25%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: lightblue;
+
+}
